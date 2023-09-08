@@ -48,7 +48,7 @@ set scrolloff=8
 
 set termguicolors
 
-let g:loaded_netrw       = 1
+let g:loaded_netrw       = 1 " Disable neovim file browser
 let g:loaded_netrwPlugin = 1
 
 
@@ -257,19 +257,14 @@ require("toggleterm").setup{
 
 require('gitsigns').setup()
 
-require("fidget").setup {
-  -- options
-}
+require("fidget").setup()
 
 local lsp = require('lsp-zero').preset({})
 
 lsp.on_attach(function(client, bufnr)
-  -- see :help lsp-zero-keybindings
-  -- to learn the available actions
   lsp.default_keymaps({buffer = bufnr})
 end)
 
--- (Optional) Configure lua language server for neovim
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.setup()
