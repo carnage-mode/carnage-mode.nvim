@@ -289,8 +289,9 @@ cmp.setup({
 
 EOF
 
-" Other stuff
+" Misc stuff
 "
+
 function! ClearRegisters()
     let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-="*+'
     let i=0
