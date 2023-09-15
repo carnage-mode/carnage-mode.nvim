@@ -262,13 +262,13 @@ require('gitsigns').setup()
 
 require("fidget").setup()
 
-local lsp = require('lsp-zero').preset({})
+local lsp = require('lsp-zero')
 
 lsp.on_attach(function(client, bufnr)
   lsp.default_keymaps({buffer = bufnr})
 end)
 
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+require('lspconfig').lua_ls.setup({})
 
 lsp.setup()
 
@@ -278,6 +278,9 @@ require('mason-lspconfig').setup({
         'clangd', 'cssls', 'emmet_language_server',
         'html', 'lua_ls', 'tsserver', 'vimls'
     },
+    handlers = {
+        lsp.default_setup,
+    }
 })
 
 local cmp = require('cmp')
