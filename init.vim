@@ -68,6 +68,9 @@ highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine
 let mapleader = " "
 let maplocalleader = " "
 
+map <C-l> 20zl
+map <C-h> 20zh
+
 " Telescope
 "
 nnoremap <leader>f <cmd>Telescope find_files<cr>
