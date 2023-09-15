@@ -153,7 +153,7 @@ Plug 'rafamadriz/friendly-snippets' " collection of snippets for LuaSnip
 Plug 'hrsh7th/cmp-nvim-lsp' " lets nvim-cmp use lsp for completions
 Plug 'hrsh7th/cmp-path' " lets nvim-cmp use filesytesm paths for completions
 Plug 'saadparwaiz1/cmp_luasnip' " lusnip as a source for nvim-cmp
-Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v2.x'} " makes LSP setup easy
+Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'} " makes LSP setup easy
 
 
 " Language specific stuff
@@ -272,6 +272,14 @@ require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.setup()
 
+require('mason').setup({})
+require('mason-lspconfig').setup({
+    ensure_installed = {
+        'clangd', 'cssls', 'emmet_language_server',
+        'html', 'lua_ls', 'tsserver', 'vimls'
+    },
+})
+
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
@@ -285,8 +293,8 @@ cmp.setup({
   },
   mapping = {
     ['<CR>'] = cmp.mapping.confirm({select = true}),
-    ['<Tab>'] = cmp_action.luasnip_supertab(),
-    ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
+    ['<Tab>'] = cmp_action.tab_complete(),
+    ['<S-Tab>'] = cmp_action.select_prev_or_fallback(),
   }
 })
 
