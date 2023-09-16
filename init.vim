@@ -23,6 +23,9 @@ set smartindent
 
 set nowrap                  " disable line wraps
 
+" disable auto comments on next line
+autocmd FileType * set formatoptions-=cro
+
 " Highlight whitespace
 set list
 set lcs+=space:·
