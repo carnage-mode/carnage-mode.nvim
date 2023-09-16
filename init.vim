@@ -296,8 +296,7 @@ cmp.setup({
   },
   mapping = {
     ['<CR>']    = cmp.mapping.confirm({select = true}),
-    ['<Tab>']   = cmp_action.tab_complete(),
-    ['<S-Tab>'] = cmp_action.select_prev_or_fallback(),
+    ['<S-Tab>'] = cmp_action.tab_complete(),
     ['<C-u>']   = cmp.mapping.scroll_docs(-4),
     ['<C-d>']   = cmp.mapping.scroll_docs(4),
   }
