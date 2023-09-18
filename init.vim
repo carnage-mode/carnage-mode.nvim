@@ -326,3 +326,8 @@ function! ClearRegisters()
 endfunction
 
 command! ClearRegisters call ClearRegisters()
+
+augroup Markdown
+    autocmd!
+    autocmd FileType markdown set wrap
+augroup END
