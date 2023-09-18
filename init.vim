@@ -183,6 +183,8 @@ lua << EOF
 require('lualine').setup({
     options = {
         theme = "adwaita",
+        section_separators = { left = '', right = '' },
+        component_separators = { left = '|', right = '|' }
     }
 })
 
