@@ -125,7 +125,7 @@ nnoremap <silent> <Space>bw <Cmd>BufferOrderByWindowNumber<CR>
 call plug#begin()
 
 " Appearance changes
-Plug 'rebelot/kanagawa.nvim' " nvim color theme
+Plug 'Mofiqul/adwaita.nvim'     " nvim color theme
 Plug 'nvim-tree/nvim-web-devicons' " nvim icons theme
 Plug 'nvim-lualine/lualine.nvim' " nvim statusline
 Plug 'lukas-reineke/indent-blankline.nvim' " add indentation lines to make reading functions easier
@@ -175,11 +175,16 @@ call plug#end()
 " Plugin setup & configuration
 "
 
-colorscheme kanagawa-dragon
+let g:adwaita_darker = v:true
+colorscheme adwaita
 
 lua << EOF
 
-require('lualine').setup()
+require('lualine').setup({
+    options = {
+        theme = "adwaita",
+    }
+})
 
 require'nvim-treesitter.configs'.setup{
     highlight = {
