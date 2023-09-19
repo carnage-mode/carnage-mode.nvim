@@ -144,6 +144,7 @@ Plug 'akinsho/toggleterm.nvim', {'tag' : '*'} " toggle-able terminal
 Plug 'lewis6991/gitsigns.nvim' " git diffs
 Plug 'NvChad/nvim-colorizer.lua' " color highlighter
 Plug 'nvimdev/guard.nvim' " formatting and linting
+Plug 'nvimdev/guard-collection' " Collection of configs for guard.nvim
 
 " Language enablement
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " better syntax highlighting and other cool features
