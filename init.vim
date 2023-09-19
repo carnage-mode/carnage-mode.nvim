@@ -324,6 +324,12 @@ require 'colorizer'.setup({
     }
 })
 
+local ft = require('guard.filetype')
+
+ft('html'):fmt('prettier')
+
+ft('css'):fmt('prettier')
+
 require('guard').setup()
 
 EOF
