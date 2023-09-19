@@ -143,6 +143,7 @@ Plug 'romgrk/barbar.nvim' " tab and buffer management
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'} " toggle-able terminal
 Plug 'lewis6991/gitsigns.nvim' " git diffs
 Plug 'NvChad/nvim-colorizer.lua' " color highlighter
+Plug 'nvimdev/guard.nvim' " formatting and linting
 
 " Language enablement
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " better syntax highlighting and other cool features
@@ -321,6 +322,8 @@ require 'colorizer'.setup({
         mode = "virtualtext",
     }
 })
+
+require('guard').setup()
 
 EOF
 
