@@ -142,6 +142,7 @@ Plug 'tpope/vim-sleuth' " automatically adjusts 'shiftwidth' and 'expandtab' bas
 Plug 'romgrk/barbar.nvim' " tab and buffer management
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'} " toggle-able terminal
 Plug 'lewis6991/gitsigns.nvim' " git diffs
+Plug 'NvChad/nvim-colorizer.lua' " color highlighter
 
 " Language enablement
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " better syntax highlighting and other cool features
@@ -311,6 +312,14 @@ cmp.setup({
     ['<C-u>']   = cmp.mapping.scroll_docs(-4),
     ['<C-d>']   = cmp.mapping.scroll_docs(4),
   }
+})
+
+require 'colorizer'.setup({
+    user_default_options = {
+        css = true,
+        css_fn = true,
+        mode = "virtualtext",
+    }
 })
 
 EOF
