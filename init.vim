@@ -327,11 +327,11 @@ require 'colorizer'.setup({
 
 local ft = require('guard.filetype')
 
-ft('html'):fmt('prettier')
-
 ft('css'):fmt('prettier')
 
-require('guard').setup()
+require('guard').setup({
+    lsp_as_default_formatter = true;
+})
 
 require("oil").setup()
 
