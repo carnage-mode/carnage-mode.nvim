@@ -86,11 +86,11 @@ nnoremap <leader>j <cmd>Telescope file_browser<cr>
 " Barbar
 "
 " Move to previous/next
-nnoremap <silent>    <A-,> <Cmd>BufferPrevious<CR>
-nnoremap <silent>    <A-.> <Cmd>BufferNext<CR>
+nnoremap <silent>    <A-h> <Cmd>BufferPrevious<CR>
+nnoremap <silent>    <A-l> <Cmd>BufferNext<CR>
 " Re-order to previous/next
-nnoremap <silent>    <A-<> <Cmd>BufferMovePrevious<CR>
-nnoremap <silent>    <A->> <Cmd>BufferMoveNext<CR>
+nnoremap <silent>    <A-H> <Cmd>BufferMovePrevious<CR>
+nnoremap <silent>    <A-L> <Cmd>BufferMoveNext<CR>
 " Goto buffer in position...
 nnoremap <silent>    <A-1> <Cmd>BufferGoto 1<CR>
 nnoremap <silent>    <A-2> <Cmd>BufferGoto 2<CR>
