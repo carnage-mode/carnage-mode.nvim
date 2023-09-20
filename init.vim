@@ -145,6 +145,7 @@ Plug 'lewis6991/gitsigns.nvim' " git diffs
 Plug 'NvChad/nvim-colorizer.lua' " color highlighter
 Plug 'nvimdev/guard.nvim' " formatting and linting
 Plug 'nvimdev/guard-collection' " Collection of configs for guard.nvim
+Plug 'stevearc/oil.nvim' " file explorer for managing files like buffers
 
 " Language enablement
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " better syntax highlighting and other cool features
@@ -331,6 +332,8 @@ ft('html'):fmt('prettier')
 ft('css'):fmt('prettier')
 
 require('guard').setup()
+
+require("oil").setup()
 
 EOF
 
