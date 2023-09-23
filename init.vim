@@ -138,7 +138,7 @@ Plug 'nvim-lua/plenary.nvim' " dependency for telescope.nvim
 Plug 'windwp/nvim-autopairs' " auto pair brackets
 Plug 'windwp/nvim-ts-autotag' " auto close tags for html, xml etc.
 Plug 'numToStr/Comment.nvim' " enable easy commenting
-Plug 'tpope/vim-sleuth' " automatically adjusts 'shiftwidth' and 'expandtab' based on the current file
+Plug 'nmac427/guess-indent.nvim' " auto indentation detection
 Plug 'romgrk/barbar.nvim' " tab and buffer management
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'} " toggle-able terminal
 Plug 'lewis6991/gitsigns.nvim' " git diffs
@@ -334,6 +334,8 @@ ft('css'):fmt('prettier')
 require('guard').setup()
 
 require("oil").setup()
+
+require('guess-indent').setup()
 
 EOF
 
