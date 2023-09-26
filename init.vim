@@ -332,7 +332,12 @@ ft('css'):fmt('prettier')
 
 require('guard').setup()
 
-require("oil").setup()
+require("oil").setup({
+    keymaps = {
+        ["."] = "actions.cd",
+        [".."] = "actions.parent",
+    }
+})
 
 require('guess-indent').setup()
 
