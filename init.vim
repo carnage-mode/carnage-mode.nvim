@@ -201,8 +201,9 @@ require'nvim-treesitter.configs'.setup{
     ensure_installed = {
         'bash', 'c', 'cpp', 'css', 'go', 'html',
         'java', 'javascript', 'json', 'lua',
-        'make', 'meson', 'php', 'python',
-        'racket', 'rust', 'scheme', 'sql', 'vim'
+        'make', 'markdown', 'markdown-inline',
+        'meson', 'php', 'python', 'racket',
+        'regex', 'rust', 'scheme', 'sql', 'vim'
     }
 }
 
