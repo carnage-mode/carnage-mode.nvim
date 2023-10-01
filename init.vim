@@ -55,15 +55,6 @@ let g:loaded_netrw       = 1 " Disable neovim file browser
 let g:loaded_netrwPlugin = 1
 
 
-" color mappings for indent-blankline
-highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine
-highlight IndentBlanklineIndent2 guifg=#E5C07B gui=nocombine
-highlight IndentBlanklineIndent3 guifg=#98C379 gui=nocombine
-highlight IndentBlanklineIndent4 guifg=#56B6C2 gui=nocombine
-highlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombine
-highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine
-
-
 """"""""""""""""""""""""""""""""""""""
 " Remaps
 "
@@ -219,20 +210,38 @@ require("nvim-autopairs").setup()
 
 require('Comment').setup()
 
-require("indent_blankline").setup {
-    space_char_blankline = " ",
-    show_current_context = true,
-    show_current_context_start = true,
-    show_trailing_blankline_indent = false,
-    char_highlight_list = {
-        "IndentBlanklineIndent1",
-        "IndentBlanklineIndent2",
-        "IndentBlanklineIndent3",
-        "IndentBlanklineIndent4",
-        "IndentBlanklineIndent5",
-        "IndentBlanklineIndent6",
-    },
+local highlight = {
+    "RainbowRed",
+    "RainbowYellow",
+    "RainbowBlue",
+    "RainbowOrange",
+    "RainbowGreen",
+    "RainbowViolet",
 }
+
+local hooks = require "ibl.hooks"
+hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+    vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#ed333b" })
+    vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#f8e45c" })
+    vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#62a0ea" })
+    vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#ffa348" })
+    vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#57e389" })
+    vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#c061cb" })
+end)
+
+require("ibl").setup({
+    whitespace = {
+        remove_blankline_trail = true,
+    },
+
+    indent = {
+        highlight = highlight,
+    },
+
+    scope = {
+        enabled = true,
+    }
+})
 
 require'nvim-web-devicons'.setup {
     color_icons = false,
