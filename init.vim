@@ -211,22 +211,12 @@ require("nvim-autopairs").setup()
 require('Comment').setup()
 
 local highlight = {
-    "RainbowRed",
-    "RainbowYellow",
-    "RainbowBlue",
-    "RainbowOrange",
-    "RainbowGreen",
-    "RainbowViolet",
+    "Purple2",
 }
 
 local hooks = require "ibl.hooks"
 hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-    vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#ed333b" })
-    vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#f8e45c" })
-    vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#62a0ea" })
-    vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#ffa348" })
-    vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#57e389" })
-    vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#c061cb" })
+    vim.api.nvim_set_hl(0, "Purple2", { fg = "#c061cb" })
 end)
 
 require("ibl").setup({
@@ -234,11 +224,8 @@ require("ibl").setup({
         remove_blankline_trail = true,
     },
 
-    indent = {
-        highlight = highlight,
-    },
-
     scope = {
+        highlight = highlight,
         enabled = true,
     }
 })
