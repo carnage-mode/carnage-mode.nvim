@@ -62,8 +62,8 @@ let g:loaded_netrwPlugin = 1
 let mapleader = " "
 let maplocalleader = " "
 
-map <A-l> 20zl
-map <A-h> 20zh
+map <C-l> 20zl
+map <C-h> 20zh
 
 " Telescope
 "
