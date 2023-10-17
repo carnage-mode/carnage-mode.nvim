@@ -85,7 +85,7 @@ nnoremap <silent>    <A-L> <Cmd>BufferMoveNext<CR>
 " Pin/unpin buffer
 nnoremap <silent>    <A-p> <Cmd>BufferPin<CR>
 " Close buffer
-nnoremap <silent>    <A-c> <Cmd>BufferClose<CR>
+nnoremap <silent>    <C-c> <Cmd>BufferClose<CR>
 " Restore buffer
 nnoremap <silent>    <A-s-c> <Cmd>BufferRestore<CR>
 " Magic buffer-picking mode
