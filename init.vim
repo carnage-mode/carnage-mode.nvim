@@ -113,7 +113,7 @@ Plug 'lukas-reineke/indent-blankline.nvim' " add indentation lines to make readi
 " Additional features
 Plug 'nvim-telescope/telescope.nvim' " fuzzy finder
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' } " sorter for telescope
-Plug 'nvim-lua/plenary.nvim' " dependency for telescope.nvim
+Plug 'nvim-lua/plenary.nvim' " dependency for telescope.nvim and neorg
 Plug 'windwp/nvim-autopairs' " auto pair brackets
 Plug 'windwp/nvim-ts-autotag' " auto close tags for html, xml etc.
 Plug 'numToStr/Comment.nvim' " enable easy commenting
@@ -125,6 +125,7 @@ Plug 'NvChad/nvim-colorizer.lua' " color highlighter
 Plug 'nvimdev/guard.nvim' " formatting and linting
 Plug 'nvimdev/guard-collection' " Collection of configs for guard.nvim
 Plug 'stevearc/oil.nvim' " file explorer for managing files like buffers
+Plug 'nvim-neorg/neorg', {'do': ':Neorg sync-parsers'} " notes and journals
 
 " Language enablement
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " better syntax highlighting and other cool features
@@ -327,6 +328,20 @@ require("oil").setup({
 })
 
 require('guess-indent').setup()
+
+require('neorg').setup {
+    load = {
+        ["core.defaults"] = {}, -- Loads default behaviour
+        ["core.concealer"] = {}, -- Adds pretty icons to your documents
+        ["core.dirman"] = { -- Manages Neorg workspaces
+            config = {
+                workspaces = {
+                    school = "~/Documents/Notes/school",
+                },
+            },
+        },
+    },
+}
 
 EOF
 
