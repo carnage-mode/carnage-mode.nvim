@@ -60,7 +60,7 @@ let g:loaded_netrwPlugin = 1
 "
 
 let mapleader = " "
-let maplocalleader = " "
+let maplocalleader = ","
 
 map <C-l> 20zl
 map <C-h> 20zh
