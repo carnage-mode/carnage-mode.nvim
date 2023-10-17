@@ -336,8 +336,10 @@ require('neorg').setup {
         ["core.dirman"] = { -- Manages Neorg workspaces
             config = {
                 workspaces = {
+                    random = "~/Documents/Notes/random",
                     school = "~/Documents/Notes/school",
                 },
+                default_workspace = "random",
             },
         },
     },
