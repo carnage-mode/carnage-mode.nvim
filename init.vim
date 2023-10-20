@@ -342,6 +342,7 @@ require('neorg').setup {
                 workspaces = {
                     random = "~/Documents/Notes/random",
                     school = "~/Documents/Notes/school",
+                    songwritting = "~/Documents/Notes/songwritting",
                 },
                 default_workspace = "random",
             },
