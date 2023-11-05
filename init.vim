@@ -318,6 +318,8 @@ ft('html'):fmt('prettier')
 
 ft('css'):fmt('prettier')
 
+ft('markdown'):fmt('prettier')
+
 ft('typescript,javascript,typescriptreact'):fmt('prettier')
 
 require('guard').setup()
