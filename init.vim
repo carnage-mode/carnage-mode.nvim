@@ -331,7 +331,9 @@ require("oil").setup({
 
 require('guess-indent').setup()
 
-require('glow').setup()
+require('glow').setup({
+    glow_path = "/var/home/linuxbrew/.linuxbrew/bin/glow",
+})
 
 EOF
 
