@@ -275,8 +275,7 @@ lsp.setup()
 require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = {
-        -- 'clangd'
-        'cssls', 'emmet_language_server',
+        'clangd', 'cssls', 'emmet_language_server',
         'html', 'lua_ls', 'tsserver', 'vimls'
     },
     handlers = {
