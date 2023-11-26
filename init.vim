@@ -71,6 +71,7 @@ nnoremap <leader>f <cmd>Telescope find_files<cr>
 nnoremap <leader>g <cmd>Telescope live_grep<cr>
 nnoremap <leader>b <cmd>Telescope buffers<cr>
 nnoremap <leader>h <cmd>Telescope help_tags<cr>
+nnoremap <leader>r <cmd>Telescope repo list<cr>
 nnoremap <leader>j <cmd>Oil<cr>
 
 
@@ -113,6 +114,7 @@ Plug 'lukas-reineke/indent-blankline.nvim' " add indentation lines to make readi
 " Additional features
 Plug 'nvim-telescope/telescope.nvim' " fuzzy finder
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' } " sorter for telescope
+Plug 'cljoly/telescope-repo.nvim' " find git repos
 Plug 'nvim-lua/plenary.nvim' " dependency for telescope.nvim
 Plug 'windwp/nvim-autopairs' " auto pair brackets
 Plug 'windwp/nvim-ts-autotag' " auto close tags for html, xml etc.
@@ -232,11 +234,19 @@ require('telescope').setup {
       override_generic_sorter = true,
       override_file_sorter = true,
       case_mode = "smart_case",
+    },
+    repo = {
+        list = {
+            search_dirs = {
+                "~/dev",
+            },
+        },
     }
   }
 }
 
 require('telescope').load_extension('fzf')
+require('telescope').load_extension('repo')
 
 require('treesitter-context').setup()
 
