@@ -128,6 +128,7 @@ Plug 'nvimdev/guard.nvim' " formatting and linting
 Plug 'nvimdev/guard-collection' " Collection of configs for guard.nvim
 Plug 'stevearc/oil.nvim' " file explorer for managing files like buffers
 Plug 'ellisonleao/glow.nvim' " markdown previewer
+Plug 'airblade/vim-rooter' " changes working dir to project dir
 
 " Language enablement
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " better syntax highlighting and other cool features
