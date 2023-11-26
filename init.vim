@@ -72,7 +72,7 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fr <cmd>Telescope repo list<cr>
-nnoremap <leader>j <cmd>Oil<cr>
+nnoremap <leader>bf <cmd>Oil<cr>
 
 
 " Barbar
