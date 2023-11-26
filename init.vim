@@ -1,4 +1,4 @@
-""""""""""""""""""""""""""""""""""""""
+"""e""""""""""""""""""""""""""""""""""
 " General configuration
 "
 
@@ -67,11 +67,11 @@ map <C-h> 20zh
 
 " Telescope
 "
-nnoremap <leader>f <cmd>Telescope find_files<cr>
-nnoremap <leader>g <cmd>Telescope live_grep<cr>
-nnoremap <leader>b <cmd>Telescope buffers<cr>
-nnoremap <leader>h <cmd>Telescope help_tags<cr>
-nnoremap <leader>r <cmd>Telescope repo list<cr>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>fr <cmd>Telescope repo list<cr>
 nnoremap <leader>j <cmd>Oil<cr>
 
 
@@ -228,6 +228,9 @@ require'nvim-web-devicons'.setup {
 }
 
 require('telescope').setup {
+  defaults = {
+      initial_mode = "normal",
+  },
   extensions = {
     fzf = {
       fuzzy = true,
