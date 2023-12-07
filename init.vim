@@ -39,6 +39,8 @@ set signcolumn=yes
 
 set updatetime=100          " set the time between changes made and plugin trigger
 
+set clipboard+=unnamedplus " use system clipboard
+
 filetype plugin on
 filetype plugin indent on   "allow auto-indenting depending on file type
 
