@@ -167,6 +167,8 @@ call plug#end()
 let g:adwaita_darker = v:true
 colorscheme adwaita
 
+let g:rooter_patterns = ['.git', '_darcs', '.hg', '.bzr', '.svn', 'Makefile', 'package.json', 'index.html']
+
 lua << EOF
 
 require('lualine').setup({
