@@ -138,7 +138,7 @@ Plug 'nvim-treesitter/nvim-treesitter-context' " sticky function signatures when
 Plug 'neovim/nvim-lspconfig' " sensible defaults for LSP + Launch LSP automatically for corresponding filetypes
 Plug 'williamboman/mason.nvim' " package manger for LSP servers, DAP servers, linters, and formatters
 Plug 'williamboman/mason-lspconfig.nvim' " bridge mason and lspconfig
-Plug 'j-hui/fidget.nvim', { 'tag': 'legacy' } " nvim-lsp progress
+Plug 'j-hui/fidget.nvim', " nvim-lsp progress
 Plug 'hrsh7th/nvim-cmp' " provides completions
 Plug 'L3MON4D3/LuaSnip' " provides snippets
 Plug 'rafamadriz/friendly-snippets' " collection of snippets for LuaSnip
@@ -278,7 +278,9 @@ require("toggleterm").setup{
 
 require('gitsigns').setup()
 
-require("fidget").setup()
+require("fidget").setup {
+  -- options
+}
 
 local lsp = require('lsp-zero')
 
