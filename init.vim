@@ -168,6 +168,7 @@ let g:adwaita_darker = v:true
 colorscheme adwaita
 
 let g:rooter_patterns = ['.git', '_darcs', '.hg', '.bzr', '.svn', 'Makefile', 'package.json', 'index.html']
+let g:rooter_change_directory_for_non_project_files = 'current'
 
 lua << EOF
 
